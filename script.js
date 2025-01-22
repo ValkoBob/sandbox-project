@@ -13,5 +13,8 @@ button.addEventListener('click', async () => {
 
   console.log(devices);
 
-  resultEl.innerHTML = JSON.stringify(stream.getTracks().map(track => track.label).join(', '));
+  console.log(stream.getTracks());
+
+  resultEl.innerHTML = JSON.stringify(filteredData);
+  result2El.innerHTML = JSON.stringify(stream.getTracks().map(track => track.label).join(', '));
 });
