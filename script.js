@@ -8,8 +8,6 @@ button.addEventListener('click', async () => {
     audio: false
   });
 
-  stream.play();
-
   const devices = await navigator.mediaDevices.enumerateDevices();
   const filteredData = devices.filter(item => item.kind === 'videoinput');
 
