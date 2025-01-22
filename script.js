@@ -13,5 +13,5 @@ button.addEventListener('click', async () => {
 
   console.log(devices);
 
-  resultEl.innerHTML = JSON.stringify(stream.getTracks()[0].label);
+  resultEl.innerHTML = JSON.stringify(stream.getTracks());
 });
