@@ -1,5 +1,6 @@
 const button = document.getElementById('button');
 const resultEl = document.getElementById('result');
+const result2El = document.getElementById('result2');
 
 button.addEventListener('click', async () => {
   const stream = await navigator.mediaDevices.getUserMedia({
@@ -14,3 +15,7 @@ button.addEventListener('click', async () => {
 
   resultEl.innerHTML = JSON.stringify(filteredData);
 });
+
+document.addEventListener("devicechange", () => {
+  resultEl.innerHTML = 'Device changed.';
+})
