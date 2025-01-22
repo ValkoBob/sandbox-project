@@ -13,9 +13,7 @@ button.addEventListener('click', async () => {
   const devices = await navigator.mediaDevices.enumerateDevices();
   const filteredData = devices.filter(item => item.kind === 'videoinput');
 
-  resultEl.innerHTML = JSON.stringify(filteredData);
-});
+  console.log(devices);
 
-document.addEventListener("devicechange", () => {
-  resultEl.innerHTML = 'Device changed.';
-})
+  resultEl.innerHTML = JSON.stringify(stream.getTracks()[0].label);
+});
